@@ -1,6 +1,6 @@
-
-
-
+import Footer from "../Footer/Footer"
+import Header from "../Header/Header"
+import CategoryList from "../CategoryList/CategoryList"
 
 function CategoryPage() {
 
@@ -12,7 +12,9 @@ function CategoryPage() {
 
 
         <div>
-
+            <Header />
+            <CategoryList />
+            <Footer />
         </div>
     )
 }
