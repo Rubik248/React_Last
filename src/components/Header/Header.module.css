@@ -1,7 +1,19 @@
-.header {
+.wrapper {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 2%;
+    padding: 10px 3%;
+}
+.wrapper__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.wrapper__block_link {
+    text-decoration: none;
+    color: rgba(40, 40, 40, 1);
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
 }

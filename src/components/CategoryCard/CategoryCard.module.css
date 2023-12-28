@@ -4,16 +4,16 @@
     align-items: center;
     justify-content: center;
 }
-.image {
+.wrapper__link {
+    text-decoration: none;
+}
+.wrapper__link_image {
     width: 250px;
     height: 150px;
     border: 0;
     border-radius: 6px;
 }
-.link {
-    text-decoration: none;
-}
-.text {
+.wrapper__link_text {
     width: 250px;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;

@@ -1,0 +1,26 @@
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0; 
+    gap: 30px;
+}
+.block__title {
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(40, 40, 40, 1);     
+}
+.block__text {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(139, 139, 139, 1);
+}

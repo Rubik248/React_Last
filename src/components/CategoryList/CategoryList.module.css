@@ -5,19 +5,19 @@
     padding: 0 2%;
     margin-bottom: 60px;
 }
-.block1 {
+.wrapper__block1 {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
-.title {
+.wrapper__block1_title {
     font-family: "Montserrat", sans-serif;
     font-size: 64px;
     font-weight: 900;
     color: rgba(40, 40, 40, 1);
 }
-.block2 {
+.wrapper__block2 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;

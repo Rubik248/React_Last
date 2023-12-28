@@ -1,24 +1,14 @@
 import ContactInfo from "../ContactInfo/ContactInfo"
-import Geolocation from "../Geolocation/Geolocation"
-
-
-
-
-
+import GoogleMap from "../GoogleMap/GoogleMap"
 
 function Footer() {
-
-
-
 
     return (
         <div>
             <ContactInfo/>
-            <Geolocation/>
+            <GoogleMap/>
         </div>
     )
 }
-
-
 
 export default Footer

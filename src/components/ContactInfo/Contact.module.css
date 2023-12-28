@@ -3,38 +3,38 @@
     flex-direction: column;
     padding: 0 2%;
 }
-.title {
+.wrapper__title {
     font-family: 'Montserrat', sans-serif;
     color: rgba(40, 40, 40, 1);
     font-size: 64px;
     font-weight: 900;
 }
-.wrap {
+.wrapper__box {
     display: flex;
     font-family: 'Montserrat', sans-serif;
     gap: 100px;
     padding-top: 15px;
 }
-.block {
+.wrapper__box_block {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
 }
-.item {
+.wrapper__box_block_item {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-.text {
+.wrapper__box_block_item_text {
     color: rgba(139, 139, 139, 1);
     font-size: 20px;
 }
-.head {
+.wrapper__box_block_item_head {
     color: rgba(40, 40, 40, 1);
     font-size: 40px;
     font-weight: 900;
 }
-.images {
+.wrapper__box_block_images {
     display: flex;
     gap: 15px;
 }

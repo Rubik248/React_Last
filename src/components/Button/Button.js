@@ -1,19 +1,16 @@
+import './Button.css'
 
-import s from "../MainPromo/MainPromo.module.css"
+
+
 
 
 
 function Button(props) {
-    
-    
-    
-    let {text, bgcolor, width, padding, fontfamily, color} = props
 
-    
+    const {children, className } = props
+
     return (
-        <button 
-            style={{backgroundColor: {bgcolor}}}    
-        >{text}</button>
+        <button className={className}>{children}</button>
     )
 }
 

@@ -1,43 +1,45 @@
-import CategoryCard from "../CategoryCard/CategoryCard"
-import { useEffect, useState } from "react";
-import s from "./CategoryList.module.css"
+import { useSelector, useDispatch } from 'react-redux'
+import { useEffect } from 'react';
+import { apiData } from '../../store/dataThunk';
+import { Link } from 'react-router-dom';
+import CategoryCard from '../CategoryCard/CategoryCard';
+import style from './CategoryList.module.css'
+import Button from '../Button/Button';
 
 
+function CategoryList() {
+    
+    const dispatch = useDispatch();
+    const { category } = useSelector((state) => state);
+    const currentPath = window.location.pathname;
 
-
-
-
-function Categories() {
-
-    const [category, setCategory] = useState([])
-
-
-    useEffect(() => {
-        fetch('http://localhost:3333/categories/all')
-            .then(res => res.json())
-            .then(data => setCategory(data))
-    }, [])
-    const data = [];
-    category.map(e => data.push(e.image))
-
-
-
+    useEffect(() => { dispatch(apiData()) }, [dispatch]);
 
     return (
-        <div className={s.wrapper}>
-            <div className={s.block1}>
-                <h2 className={s.title}>Categories</h2>
-            </div>
-            <div className={s.block2}>
-                <CategoryCard way={data[0]} text="Fertilizer"/>
-                <CategoryCard way={data[1]} text="Protective products and septic tanks"/>
-                <CategoryCard way={data[2]} text="Planting material"/>
-                <CategoryCard way={data[3]} text="Tools and equipment"/>
-                <CategoryCard way={data[4]} text="Pots and planters"/>
-            </div>
+        <div className={style.wrapper}>
+        <div className={style.wrapper__block1}>
+            <h2 className={style.wrapper__block1_title}>Categories</h2>
+            {   (currentPath === '/') ? 
+                    <Link to="/category">
+                        <Button children="All categories" className='buttonSecond'/>
+                    </Link> : <></>
+            }
         </div>
-    )
+        <div className={style.wrapper__block2}>
+        {category.map(category => {
+                if (category.id < 5) {
+                    return (
+                        <CategoryCard image={category.image} title={category.title} id={category.id} path='/category/'/>
+                    )
+                } else if ( category.id < 6 && currentPath === '/category') {
+                    return (
+                        <CategoryCard image={category.image} title={category.title} id={category.id} path=''/>
+                    )
+                }
+            })}
+        </div>
+        </div>
+     );
 }
 
-
-export default Categories
+export default CategoryList;
